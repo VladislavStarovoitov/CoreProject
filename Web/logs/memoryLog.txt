@@ -1,0 +1,8 @@
+Request time: 1751ms.
+Request time: 713ms.
+Request time: 955ms.
+Request time: 965ms.
+Request time: 752ms.
+Request time: 1564ms.
+Request time: 5045ms.
+Request time: 5499ms.

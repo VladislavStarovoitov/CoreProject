@@ -1,0 +1,73 @@
+Request starting HTTP/1.1 DEBUG http://localhost:56722/  0
+Request starting HTTP/1.1 GET http://localhost:44305/  
+Request finished in 518.8846ms 200 
+Request finished in 29231.6389ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44305/lib/bootstrap/dist/css/bootstrap.css  
+Request starting HTTP/1.1 GET http://localhost:44305/lib/jquery/dist/jquery.js  
+Request starting HTTP/1.1 GET http://localhost:44305/css/site.css  
+Request finished in 404.5785ms 200 text/css
+Request finished in 780.9884ms 200 text/css
+Request starting HTTP/1.1 GET http://localhost:44305/images/banner1.svg  
+Request starting HTTP/1.1 GET http://localhost:44305/lib/bootstrap/dist/js/bootstrap.js  
+Request finished in 3447.0298ms 200 application/javascript
+Request finished in 2550.5448ms 200 image/svg+xml
+Request starting HTTP/1.1 GET http://localhost:44305/images/banner4.svg  
+Request starting HTTP/1.1 GET http://localhost:44305/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2  
+Request starting HTTP/1.1 GET http://localhost:44305/images/banner3.svg  
+Request starting HTTP/1.1 GET http://localhost:44305/images/banner2.svg  
+Request finished in 320.7059ms 200 font/woff2
+Request starting HTTP/1.1 GET http://localhost:44305/js/site.js?v=ji3-IxbEzYWjzzLCGkF1KDjrT2jLbbrSYXw-AhMPNIA  
+Request finished in 666.5214ms 200 image/svg+xml
+Request finished in 1931.5072ms 200 image/svg+xml
+Request finished in 949.7059ms 200 image/svg+xml
+Request finished in 652.7537ms 200 application/javascript
+Request finished in 6237.3187ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:44305/favicon.ico  
+Request finished in 175.5791ms 200 image/x-icon
+Request starting HTTP/1.1 GET http://localhost:44305/  
+Request finished in 3834.7508ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44305/favicon.ico  
+Request finished in 392.6114ms 200 image/x-icon
+Request starting HTTP/1.1 GET http://localhost:44305/Home/Contact  
+Request finished in 2730.0939ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44305/Account/Register  
+Request starting HTTP/1.1 GET http://localhost:44305/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+Request starting HTTP/1.1 GET http://localhost:44305/lib/jquery-validation/dist/jquery.validate.js  
+Request finished in 7080.4943ms 200 text/html; charset=utf-8
+Request finished in 1947.4588ms 200 application/javascript
+Request finished in 3025.408ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:44305/  
+Request starting HTTP/1.1 DEBUG http://localhost:56722/  0
+Request finished in 375.8608ms 200 
+Request starting HTTP/1.1 DEBUG http://localhost:56722/  0
+Request starting HTTP/1.1 GET http://localhost:44305/  
+Request finished in 52206.2648ms 200 
+Request finished in 70536.8608ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 DEBUG http://localhost:56722/  0
+Request starting HTTP/1.1 GET http://localhost:44305/  
+Request finished in 739.1574ms 200 
+Request finished in 18385.5975ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 DEBUG http://localhost:56722/  0
+Request starting HTTP/1.1 GET http://localhost:44305/  
+Request finished in 542.5698ms 200 
+Request finished in 16184.3748ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 DEBUG http://localhost:56722/  0
+Request starting HTTP/1.1 GET http://localhost:44305/  
+Request finished in 600.5468ms 200 
+Request finished in 18311.8557ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44305/Home/About  
+Request finished in 1858.7476ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44305/Home/Contact  
+Request finished in 2248.1293ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44305/Home/About  
+Request finished in 1113.6161ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44305/Home/Contact  
+Request finished in 1026.3739ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44305/Home/About  
+Request finished in 804.9441ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44305/  
+Request finished in 1791.5754ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44305/Account/Register  
+Request finished in 5290.3469ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44305/Account/Login  
+Request finished in 5654.5732ms 200 text/html; charset=utf-8
