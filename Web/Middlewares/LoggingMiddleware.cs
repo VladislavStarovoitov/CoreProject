@@ -19,7 +19,7 @@ namespace Web.Middlewares
 
         public async Task InvokeAsync(HttpContext context, ILoggerFactory loggerFactory)
         {
-            ILogger logger = loggerFactory.CreateLogger("logs/memoryLog.txt");
+            ILogger logger = loggerFactory.CreateLogger("memoryLog.txt");
             Stopwatch watch = new Stopwatch();
             watch.Start();
             await _next.Invoke(context);

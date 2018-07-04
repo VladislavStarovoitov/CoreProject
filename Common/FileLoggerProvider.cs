@@ -6,7 +6,7 @@ namespace Common
     {
         public ILogger CreateLogger(string path)
         {
-            return new FileLogger(path);
+            return new FileLogger($"logs/{path}");
         }
 
         public void Dispose()

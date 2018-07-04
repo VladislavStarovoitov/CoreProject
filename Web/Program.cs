@@ -19,6 +19,10 @@ namespace Web
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .ConfigureLogging(logging =>
+                {
+                    logging.ClearProviders();
+                })
                 .UseStartup<Startup>()
                 .Build();
     }
