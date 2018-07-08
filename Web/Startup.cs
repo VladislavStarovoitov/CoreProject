@@ -14,6 +14,7 @@ using Web.Services;
 using Microsoft.Extensions.Logging;
 using Common;
 using Web.Middlewares;
+using Web.Constraints;
 
 namespace Web
 {
@@ -68,7 +69,9 @@ namespace Web
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}",
+                    defaults: null,
+                    constraints: new { urlConstraint = new UrlConstraint("/About") });
             });
         }
     }
