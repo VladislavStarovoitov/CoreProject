@@ -1,7 +1,11 @@
-﻿
+﻿@using Web.Areas.Admin.Models
+
+@model IEnumerable<ShortUserInfoViewModel>
+
 @{
     ViewData["Title"] = "Index";
 }
 
-<h2>Admin Index</h2>
+@Html.Partial("_ShortUserInfo", Model)
+
 
