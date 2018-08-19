@@ -21,7 +21,7 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
+            <tr id="@item.UserName">
                 <td>
                     @Html.DisplayFor(modelItem => item.Email)
                 </td>
@@ -35,9 +35,8 @@
                     @Html.DisplayFor(modelItem => item.Age)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { userName = item.UserName  }) 
-                    @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+                    @Html.ActionLink("Edit", "Edit", new { userName = item.UserName  }) |
+                    <a href="#" onclick="deleteUser('@item.UserName')">Delete</a>
                 </td>
             </tr>
         }

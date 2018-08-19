@@ -35,6 +35,7 @@ namespace Web.Areas.Admin.Controllers
             return View(list);
         }
 
+        [HttpGet]
         public async Task<IActionResult> Edit(string userName)
         {
             var user = await _userManager.FindByNameAsync(userName);
@@ -54,6 +55,11 @@ namespace Web.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(ShortUserInfoViewModel userInfo)
         {
+            if (!ModelState.IsValid)
+            {
+                return View(userInfo);
+            }
+
             var user = await _userManager.FindByNameAsync(userInfo.UserName);
 
             user.FirstName = userInfo.FirstName;
@@ -78,9 +84,21 @@ namespace Web.Areas.Admin.Controllers
             return View(userInfo);
         }
 
-        public IActionResult Delete(string userName)
+        [HttpDelete()]
+        public async Task<bool> Delete(string id)
         {
-            return View();
+            ApplicationUser user = await _userManager.FindByNameAsync(id);
+
+            if (user != null)
+            {
+                var result = await _userManager.DeleteAsync(user);
+                if (result.Succeeded)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }
