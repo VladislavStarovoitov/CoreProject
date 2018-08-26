@@ -33,3 +33,7 @@
         display: none;
     }
 }
+
+li > a.white{
+    color: white !important;
+}

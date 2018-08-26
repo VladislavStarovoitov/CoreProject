@@ -43,7 +43,10 @@ namespace Web
 
             services.AddTransient<IEmailSender, EmailSender>();
 
-            services.AddMvc();
+            services.AddLocalization(options => options.ResourcesPath = "Resources");
+            services.AddMvc()
+                .AddDataAnnotationsLocalization()
+                .AddViewLocalization();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +54,7 @@ namespace Web
         {
             loggerFactory.AddFile();
 
+            app.UseMiddleware<CultureMiddleware>();
             app.UseMiddleware<LoggingMiddleware>();
 
             if (env.IsDevelopment())
