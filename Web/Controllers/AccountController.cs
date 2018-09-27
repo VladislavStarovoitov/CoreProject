@@ -220,19 +220,22 @@ namespace Web.Controllers
         {
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
-            {                
+            {
                 var userRole = await _roleManager.FindByNameAsync("User");
                 if (userRole != null)
                 {
-                    var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                    var user = new ApplicationUser { UserName = model.Email, Email = model.Email, FirstName = model.FirstName,
+                    LastName = model.LastName, BirthDate = model.BirthDate};
+                   
                     var result = await _userManager.CreateAsync(user, model.Password);
                     if (result.Succeeded)
                     {
+                        await _userManager.AddClaimAsync(user, new Claim(ClaimTypes.DateOfBirth, user.BirthDate.Year.ToString()));
                         await _userManager.AddToRoleAsync(user, userRole.Name);
                         var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                         var callbackUrl = Url.EmailConfirmationLink(user.Id, code, Request.Scheme);
                         await _emailSender.SendEmailConfirmationAsync(model.Email, callbackUrl);
-
+                        
                         await _signInManager.SignInAsync(user, isPersistent: false);
 
                         return RedirectToLocal(returnUrl);
@@ -243,7 +246,7 @@ namespace Web.Controllers
                 {
                     ModelState.AddModelError(string.Empty, "Can't find 'user' role.");
                 }
-                
+
             }
 
             // If we got this far, something failed, redisplay form

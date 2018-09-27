@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Web.Areas.Admin.Models;
 using Web.Models;
@@ -29,7 +30,7 @@ namespace Web.Areas.Admin.Controllers
                     LastName = u.LastName,
                     Email = u.Email,
                     UserName = u.UserName,
-                    Age = u.Age
+                    BirthDate = u.BirthDate
                 }).ToList();
 
             return View(list);
@@ -45,7 +46,7 @@ namespace Web.Areas.Admin.Controllers
                 LastName = user.LastName,
                 Email = user.Email,
                 UserName = user.UserName,
-                Age = user.Age
+                BirthDate = user.BirthDate
             };
 
             return View(userInfo);
@@ -66,11 +67,15 @@ namespace Web.Areas.Admin.Controllers
             user.LastName = userInfo.LastName;
             user.Email = userInfo.Email;
             user.UserName = userInfo.UserName;
-            user.Age = userInfo.Age;
+            user.BirthDate = userInfo.BirthDate;
 
             var result = await _userManager.UpdateAsync(user);
+            
             if (result.Succeeded)
             {
+                await _userManager.RemoveClaimAsync(user, User.FindFirst(ClaimTypes.DateOfBirth));
+                await _userManager.AddClaimAsync(user, new Claim(ClaimTypes.DateOfBirth, user.BirthDate.Year.ToString()));
+
                 return RedirectToAction("Index");
             }
             else

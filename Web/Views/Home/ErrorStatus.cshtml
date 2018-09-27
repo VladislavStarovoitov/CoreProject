@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "ErrorStatus";
+}
+
+@if ((int)ViewData["status"] == 404)
+{
+    <img src="~/images/404.png" style="width: 100%;" />
+}
+else
+{
+    <h3>@ViewData["status"]</h3>
+}
+
+

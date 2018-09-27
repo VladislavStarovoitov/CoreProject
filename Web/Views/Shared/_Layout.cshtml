@@ -38,11 +38,12 @@
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">@SharedLocalizer["Home"]</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">@SharedLocalizer["About"]</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">@SharedLocalizer["Contact"]</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="AdultContent">18+</a></li>
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a asp-language="@Language.Russian" href="@Context.Request.Path?Language=Russian">RU</a></li>
-                    <li><a asp-language="@Language.English" href="@Context.Request.Path?Language=English">EN</a></li>
+                    <li><a asp-language="@Language.Russian">RU</a></li>
+                    <li><a asp-language="@Language.English">EN</a></li>
                 </ul>
             </div>
         </div>
