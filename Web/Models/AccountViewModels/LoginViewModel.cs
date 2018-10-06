@@ -8,12 +8,12 @@ namespace Web.Models.AccountViewModels
 {
     public class LoginViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "ErrorEmailMessage")]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "ErrorPasswordMessage")]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }

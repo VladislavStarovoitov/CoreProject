@@ -61,12 +61,11 @@ namespace Web.Areas.Admin.Controllers
                 return View(userInfo);
             }
 
-            var user = await _userManager.FindByNameAsync(userInfo.UserName);
+            var user = await _userManager.GetUserAsync(User);
 
             user.FirstName = userInfo.FirstName;
             user.LastName = userInfo.LastName;
             user.Email = userInfo.Email;
-            user.UserName = userInfo.UserName;
             user.BirthDate = userInfo.BirthDate;
 
             var result = await _userManager.UpdateAsync(user);

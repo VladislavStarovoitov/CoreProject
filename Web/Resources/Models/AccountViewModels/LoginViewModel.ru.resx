@@ -120,6 +120,12 @@
   <data name="Email" xml:space="preserve">
     <value>Почта</value>
   </data>
+  <data name="ErrorEmailMessage" xml:space="preserve">
+    <value>Укажите почту.</value>
+  </data>
+  <data name="ErrorPasswordMessage" xml:space="preserve">
+    <value>Укажите пароль.</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Пароль</value>
   </data>

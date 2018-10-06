@@ -120,6 +120,12 @@
   <data name="Email" xml:space="preserve">
     <value>Email</value>
   </data>
+  <data name="ErrorEmailMessage" xml:space="preserve">
+    <value>The Email field is required.</value>
+  </data>
+  <data name="ErrorPasswordMessage" xml:space="preserve">
+    <value>The Password field is required.</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
   </data>

@@ -10,7 +10,6 @@
         <form asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post">
             <h4>Create a new account.</h4>
             <hr />
-            <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Email"></label>
                 <input asp-for="Email" class="form-control" />
@@ -34,7 +33,6 @@
             <div class="form-group">
                 <label for="Time" class="control-label">Birth Time</label>
                 <input asp-for="BirthDate" id="Time" type="time" name="Time" class="form-control" />
-                <span asp-validation-for="BirthDate" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Password"></label>

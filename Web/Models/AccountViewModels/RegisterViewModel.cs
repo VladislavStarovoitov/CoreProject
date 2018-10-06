@@ -1,9 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Web.Models.AccountViewModels
 {
-    public class RegisterViewModel
+    public class RegisterViewModel : IValidatableObject
     {
         [Required]
         [EmailAddress]
@@ -18,7 +19,7 @@ namespace Web.Models.AccountViewModels
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
-        
+        [Required]
         public DateTime BirthDate { get; set; }
 
         [Required]
@@ -31,5 +32,17 @@ namespace Web.Models.AccountViewModels
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        {
+            List<ValidationResult> errors = new List<ValidationResult>();
+
+            if (this.BirthDate.Year < 1801)
+            {
+                errors.Add(new ValidationResult("Not valid year!", new List<string>() { "BirthDate" }));
+            }
+
+            return errors;
+        }
     }
 }
